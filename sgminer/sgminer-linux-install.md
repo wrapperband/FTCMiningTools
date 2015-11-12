@@ -14,7 +14,7 @@ In order make a stable install which will work with the neoscrypt algorithm, spe
 This guide has been tested on R9 2** cards and is optimised for Neoscrypt on R9 280 in the guides default configuration.
 
 **#1. install the GNU/Linux distrobution : Ubuntu 14.04.0x**  
-**Open a terminal and do an update to Ubuntu**  
+**Once 14.04 is installed then open a terminal and do an update**  
 Code:  
 sudo apt-get update  
 sudo apt-get upgrade -y  
@@ -130,7 +130,11 @@ Code:
 cd ~/sgminer  
 rm *.bin  
 autoreconf -i -f   &&  CFLAGS="-O2 -Wall -march=native -std=gnu99" ./configure && make && ./sgminer.sh  
-  
+
+**#10. Further Ubutu updates policy :**
+You can do any updates , but makes sure to hold back any to over ride our special SMD fglrx driver install.
+
+**#11. Sgminer configuration file set-up**
 The configuration file sgminer.conf is stored in the .sgminer hidden directory. Use Ctr-H in Gnome / Nautilus or Alt . in KDE / Dolphin, to show the hidden directories in the home directories.  
   
 I have experimented and read about xIntensity, it made no difference to adjust that from 3 for neoscrypt. It gave exactly the same results with raw intensity of 5690.  
