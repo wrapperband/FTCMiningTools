@@ -101,9 +101,9 @@ Code:
 nano sgminer.sh   
 
 **Copy in the script code and customise as required :**  
-#!/bin/bash -         
-#title           :sgminer.sh  
-#description     :Start sgminer  
+*#!/bin/bash -*   
+*#title           :sgminer.sh*  
+*#description     :Start sgminer*  
 export DISPLAY=:0  
 export GPU_MAX_ALLOC_PERCENT=100  
 export GPU_USE_SYNC_OBJECTS=1  
