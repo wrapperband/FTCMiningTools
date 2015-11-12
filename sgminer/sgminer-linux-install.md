@@ -13,7 +13,7 @@ In order make a stable install which will work with the neoscrypt algorithm, spe
 
 This guide has been tested on R9 2** cards and is optimised for Neoscrypt on R9 280 in the guides default configuration.
 
-**#1. install Ubuntu 14.04.0x**  
+**#1. install the GNU/Linux distrobution : Ubuntu 14.04.0x**  
 **Open a terminal and do an update to Ubuntu**  
 Code:  
 sudo apt-get update  
@@ -70,7 +70,7 @@ sudo aticonfig --adapter=all --initial
   
 **#5. Reboot**  
   
-**#6. Install sgminer 5.1.2**  
+**#6. Install Sgminer 5.1.2**  
 Code  
 cd ~/  
 git clone https://github.com/wrapperband/sgminer.git  
@@ -95,8 +95,8 @@ export GPU_MAX_ALLOC_PERCENT=100
 export GPU_USE_SYNC_OBJECTS=1  
 ./sgminer  
 
-**#7. Create a sgminer start script**  
-**#Create the script file to start sgminer correctly**  
+**#7. Create a Sgminer start up script**  
+**Create the script file to start sgminer correctly**  
 Code:  
 nano sgminer.sh   
 
@@ -109,7 +109,7 @@ export GPU_MAX_ALLOC_PERCENT=100
 export GPU_USE_SYNC_OBJECTS=1  
 ./sgminer  
 
-**#Make the bash script runnable**  
+**Make the bash script runnable**  
 Code:  
 chmod a+x *.sh  
   
@@ -125,7 +125,7 @@ There are four neoscypts available in the 5.1.2, neoscrypt.cl, neoscrypt.v1 and 
 There is also a 79XX kernel version, with some of the 290 code replaced to handle older cards, which is included as a separate file neoscrypt.7690.  
 It is worth experimenting to see which kernel works best with your setup, copy one of the neoscrypt files then run a Sgminer recompile.  
 
-**Recompile sgminer after changing the kernel**  
+**#9. Recompile sgminer after changing over to an alternate kernel**  
 Code:  
 cd ~/sgminer  
 rm *.bin  
