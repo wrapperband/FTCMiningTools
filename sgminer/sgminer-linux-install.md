@@ -140,6 +140,7 @@ The configuration file sgminer.conf is stored in the .sgminer hidden directory. 
 I have experimented and read about xIntensity, it made no difference to adjust that from 3 for neoscrypt. It gave exactly the same results with raw intensity of 5690.  
   
 **An example sgminer.conf pointing towards p2pools, just replace the address with your own.**  
+For R9 270
 Code :  
 nano ~/sgminer/sgminer.conf  
   
@@ -169,7 +170,7 @@ nano ~/sgminer/sgminer.conf
   "xintensity": "3",  
   "thread-concurrency": "8192",  
   "worksize": "32",  
-  "gpu-threads": "2",  
+  "gpu-threads": "1",  
   "temp-cutoff": "95",
   "temp-overheat": "85",  
   "temp-target": "75",  
