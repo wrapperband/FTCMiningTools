@@ -195,3 +195,17 @@ nano ~/sgminer/sgminer.conf
   "watchpool-refresh": "30"  
 }  
   
+#12. Further Tinkering
+
+Code to add Bitalign was reved in version 5.1.1, but some cards may run better with the BFI patch included.  
+Here's how you can regress the commit changes to github, and reset the files with the patch removed, without being online as git contains all changes.  
+  
+Code:  
+cd sgminer  
+git revert 55da7b5bb14436b079e5580edba185bcb2fdb2cf  
+git submodule init  
+git submodule update  
+autoreconf -i -f  && CFLAGS="-O2 -Wall -march=native -std=gnu99 -D BITALIGN" ./configure &&  make   
+rm *.bin  
+./sgminer.sh  
+
